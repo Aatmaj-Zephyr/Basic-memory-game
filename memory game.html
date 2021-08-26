@@ -1,7 +1,6 @@
-
 <html>
 <body>
-<h1>Hello World</h1>
+
 <div class="keys">
 <button id="button1" onclick="Buttonclicked(1)">
     ?
@@ -60,7 +59,7 @@ var lastbutton=null;
 var score=0;
 var turns=0;
 const arr=[];
-arr.push("0");
+
 for(let j=0;j<8;j++){
     r=Math.floor(Math.random() * (90 - 64 + 1) ) + 64;
 
@@ -69,7 +68,7 @@ for(let j=0;j<8;j++){
 }
 arr.sort( () => .5 - Math.random() );
 //const arr=["0","a","b","b","a","c","c","a","b","a","c","c","a","b","a","c","c"]
-
+arr.push(arr[0]);
     function Buttonclicked(a){
      document.getElementById("button"+a).innerHTML=arr[a];
       document.getElementById("button"+a).disabled = "disabled";
@@ -115,6 +114,7 @@ arr.sort( () => .5 - Math.random() );
         }
     }
     function gameover(){
+        alert("Game Over");
         document.getElementById("score").innerHTML="Game over!";
         document.getElementById("Turns").innerHTML="You took "+turns+" turns";
     }
