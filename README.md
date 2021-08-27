@@ -10,3 +10,5 @@ How to play this game-
 1) Click on the buttons to 'flip' the cards.
 2) When two same cards are selected, score is increased.
 3) Challenge yourself to complete within the least number of moves possible.
+
+![image](https://user-images.githubusercontent.com/83284294/131067225-012a95b4-4d32-408e-a28f-f855dbd57bca.png)
