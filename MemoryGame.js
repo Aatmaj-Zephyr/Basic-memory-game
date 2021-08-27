@@ -47,15 +47,15 @@ function checkscore(a){
         else{
             //If they match.... 
             score=score+1; //Increase score
-            document.getElementById("button"+a).style="background-color:lime;"
-            document.getElementById("button"+lastbutton).style="background-color:lime;"
+            document.getElementById("button"+a).style="background-color:lime";
+            document.getElementById("button"+lastbutton).style="background-color:lime";
             //Change their colours to green
             document.getElementById("button"+lastbutton).disabled = "disabled";
             document.getElementById("button"+a).disabled = "disabled";
             //Disable them from further clicking.
             document.getElementById("score").innerHTML="Score="+score;
             //display score
-            lastbutton=null
+            lastbutton=null;
         }
       
         turns=turns+1; //Increase number of turns
