@@ -66,11 +66,11 @@ function checkscore(a){
         }
     }
 }
-    function gameover(){
+function gameover(){
         window.setTimeout(function (){
          alert("Game Over");
         //alert that the game is over after a delay
         },1000)
         document.getElementById("score").innerHTML="Game over!";
         document.getElementById("Turns").innerHTML="You took "+turns+" turns";
-    }
+}
