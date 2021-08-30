@@ -1,32 +1,33 @@
+//PascalCase followed
 var lastbutton = null; //Last button that was clicked. 
-var score = 0; //Score, i.e. how many cards are opened
+var score = 0; //Score, i.e. how many Cards are opened
 var turns = 0; //Number of turns taken.
 
-const Cards = []; //Array to store the Cards
-//Setting the cards
+const Cards = []; //Array to store the Cards.
+//Setting the Cards.
 for (let j = 0; j < 8; j++) {
-    r = Math.floor(Math.random() * (90 - 64 + 1)) + 64; //Character set from unicode
+    r = Math.floor(Math.random() * (90 - 64 + 1)) + 64; //Character set from unicode.
     Cards.push(String.fromCharCode(r)); //Push twice.
     Cards.push(String.fromCharCode(r));
 }
-Cards.sort(() => .5 - Math.random()); //Random shuffling of cards.
-Cards.push(Cards[0]); //Ignore the card at 0th positon
+Cards.sort(() => .5 - Math.random()); //Random shuffling of Cards.
+Cards.push(Cards[0]); //Ignore the Card at 0th positon.
 
 function Buttonclicked(a) {
     //Function to be executed once button is clicked. 
     //a is the parameter which tells which button is clicked.
-    document.getElementById("button" + a).innerHTML = Cards[a]; //Flip the card over
-    document.getElementById("button" + a).disabled = "disabled"; //Disable clicking the same card
-    checkscore(a); //Check the cards.
+    document.getElementById("button" + a).innerHTML = Cards[a]; //Flip the Card over.
+    document.getElementById("button" + a).disabled = "disabled"; //Disable clicking the same Card.
+    checkscore(a); //Check the Cards.
 }
 
 function checkscore(a) {
     if (lastbutton == null) {
         lastbutton = a;
-        //If it is the first Card (from two cards) to be chosen,
+        //If it is the first Card (from two Cards) to be chosen,
         //then set the value of lastbutton to the button pressed.
     } else {
-        if (Cards[a] != Cards[lastbutton]) { //IF they don't match.....
+        if (Cards[a] != Cards[lastbutton]) { //If they don't match.....
             temp = lastbutton;
             document.getElementById("button" + a).style = "background-color:Orange";
             document.getElementById("button" + temp).style = "background-color:Orange";
@@ -41,22 +42,22 @@ function checkscore(a) {
             }, 1000);
             //With delay, flip them back. and enable clicking.
 
-            lastbutton = null; //reset lastbutton
+            lastbutton = null; //reset lastbutton.
         } else {
             //If they match.... 
-            score = score + 1; //Increase score
+            score = score + 1; //Increase the score.
             document.getElementById("button" + a).style = "background-color:lime;"
             document.getElementById("button" + lastbutton).style = "background-color:lime;"
-            //Change their colours to green
+            //Change their colours to green.
             document.getElementById("button" + lastbutton).disabled = "disabled";
             document.getElementById("button" + a).disabled = "disabled";
             //Disable them from further clicking.
             document.getElementById("score").innerHTML = "Score=" + score;
-            //display score
+            //Display the score.
             lastbutton = null
         }
 
-        turns = turns + 1; //Increase number of turns
+        turns = turns + 1; //Increase number of turns.
         document.getElementById("Turns").innerHTML = "Turns taken=" + turns;
         //display the number of turns taken.
         if (score == (Cards.length - 1) / 2) {
@@ -68,7 +69,7 @@ function checkscore(a) {
 function gameover() {
     window.setTimeout(function() {
         alert("Game Over");
-        //alert that the game is over after a delay
+        //Alert that the game is over after a delay.
     }, 1000)
     document.getElementById("score").innerHTML = "Game over!";
     document.getElementById("Turns").innerHTML = "You took " + turns + " turns";
