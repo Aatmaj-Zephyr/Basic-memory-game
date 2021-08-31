@@ -12,7 +12,10 @@ for (let j = 0; j < 8; j++) {
 }
 Cards.sort(() => .5 - Math.random()); //Random shuffling of Cards.
 Cards.push(Cards[0]); //Ignore the Card at 0th positon.
-
+for (let f = 1; f <= 16; f++) {
+    document.getElementById("button" + f).style="cursor: pointer;border-radius: 8px;";
+    //Button formatting
+}
 function Buttonclicked(a) {
     //Function to be executed once button is clicked. 
     //a is the parameter which tells which button is clicked.
@@ -34,8 +37,8 @@ function checkscore(a) {
             //If invalid, then set the background background-color Orange.
             window.setTimeout(function() {
                 document.getElementById("button" + a).innerHTML = "?";
-                document.getElementById("button" + a).style = "background-color:";
-                document.getElementById("button" + temp).style = "background-color:";
+                document.getElementById("button" + a).style = "cursor: pointer;border-radius: 8px;background-color:";
+                document.getElementById("button" + temp).style = "cursor: pointer;border-radius: 8px;background-color:";
                 document.getElementById("button" + temp).innerHTML = "?";
                 document.getElementById("button" + temp).disabled = "";
                 document.getElementById("button" + a).disabled = "";
