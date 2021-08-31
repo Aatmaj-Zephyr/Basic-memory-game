@@ -29,8 +29,8 @@ function checkscore(a) {
     } else {
         if (Cards[a] != Cards[lastbutton]) { //If they don't match.....
             temp = lastbutton;
-            document.getElementById("button" + a).style = "background-color:Orange";
-            document.getElementById("button" + temp).style = "background-color:Orange";
+            document.getElementById("button" + a).style = "background-color:Tomato;color:White;";
+            document.getElementById("button" + temp).style = "background-color:Tomato;color:White;";
             //If invalid, then set the background background-color Orange.
             window.setTimeout(function() {
                 document.getElementById("button" + a).innerHTML = "?";
@@ -46,8 +46,8 @@ function checkscore(a) {
         } else {
             //If they match.... 
             score = score + 1; //Increase the score.
-            document.getElementById("button" + a).style = "background-color:lime;"
-            document.getElementById("button" + lastbutton).style = "background-color:lime;"
+            document.getElementById("button" + a).style = "background-color:lime;color:Blue;";
+            document.getElementById("button" + lastbutton).style = "background-color:lime;color:Blue;";
             //Change their colours to green.
             document.getElementById("button" + lastbutton).disabled = "disabled";
             document.getElementById("button" + a).disabled = "disabled";
