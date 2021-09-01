@@ -13,7 +13,7 @@ for (let j = 0; j < 8; j++) {
 Cards.sort(() => .5 - Math.random()); //Random shuffling of Cards.
 Cards.push(Cards[0]); //Ignore the Card at 0th positon.
 for (let f = 1; f <= 16; f++) {
-    document.getElementById("button" + f).style="cursor: pointer;border-radius: 8px;";
+    document.getElementById("button" + f).style="box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);transition-duration: 0.4s;cursor: pointer;border-radius: 8px;";
     //Button formatting
 }
 function Buttonclicked(a) {
@@ -21,6 +21,7 @@ function Buttonclicked(a) {
     //a is the parameter which tells which button is clicked.
     document.getElementById("button" + a).innerHTML = Cards[a]; //Flip the Card over.
     document.getElementById("button" + a).disabled = "disabled"; //Disable clicking the same Card.
+    document.getElementById("button" + a).style="opacity: 0.7;cursor: not-allowed;color:Blue";
     checkscore(a); //Check the Cards.
 }
 
@@ -37,8 +38,8 @@ function checkscore(a) {
             //If invalid, then set the background background-color Orange.
             window.setTimeout(function() {
                 document.getElementById("button" + a).innerHTML = "?";
-                document.getElementById("button" + a).style = "cursor: pointer;border-radius: 8px;background-color:";
-                document.getElementById("button" + temp).style = "cursor: pointer;border-radius: 8px;background-color:";
+                document.getElementById("button" + a).style = "cursor: pointer;box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),border-radius: 8px;background-color:";
+                document.getElementById("button" + temp).style = "cursor: pointer;box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),border-radius: 8px;background-color:";
                 document.getElementById("button" + temp).innerHTML = "?";
                 document.getElementById("button" + temp).disabled = "";
                 document.getElementById("button" + a).disabled = "";
