@@ -10,10 +10,12 @@ for (let j = 0; j < 8; j++) {
     Cards.push(String.fromCharCode(r)); //Push twice.
     Cards.push(String.fromCharCode(r));
 }
-Cards.sort(() => .5 - Math.random()); //Random shuffling of Cards.
+Cards.sort(() => 0.5 - Math.random()); //Random shuffling of Cards.
 Cards.push(Cards[0]); //Ignore the Card at 0th positon.
+var style="box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);transition-duration: 0.4s;cursor: pointer;border-radius: 8px;";
 for (let f = 1; f <= 16; f++) {
-    document.getElementById("button" + f).style="box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);transition-duration: 0.4s;cursor: pointer;border-radius: 8px;";
+    document.getElementById("button" + f).style=style;
+   // document.getElementById("button" + f).hover="background-color: white; color: black; border: 2px solid #4CAF50;"
     //Button formatting
 }
 function Buttonclicked(a) {
@@ -33,13 +35,13 @@ function checkscore(a) {
     } else {
         if (Cards[a] != Cards[lastbutton]) { //If they don't match.....
             temp = lastbutton;
-            document.getElementById("button" + a).style = "background-color:Tomato;color:White;";
-            document.getElementById("button" + temp).style = "background-color:Tomato;color:White;";
+            document.getElementById("button" + a).style = "transition-duration: 0.8s;background-color:Tomato;color:White;";
+            document.getElementById("button" + temp).style = "transition-duration: 0.8s;background-color:Tomato;color:White;";
             //If invalid, then set the background background-color Orange.
             window.setTimeout(function() {
                 document.getElementById("button" + a).innerHTML = "?";
-                document.getElementById("button" + a).style = "cursor: pointer;box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),border-radius: 8px;background-color:";
-                document.getElementById("button" + temp).style = "cursor: pointer;box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),border-radius: 8px;background-color:";
+                document.getElementById("button" + a).style = style;
+                document.getElementById("button" + temp).style = style;
                 document.getElementById("button" + temp).innerHTML = "?";
                 document.getElementById("button" + temp).disabled = "";
                 document.getElementById("button" + a).disabled = "";
@@ -50,8 +52,8 @@ function checkscore(a) {
         } else {
             //If they match.... 
             score = score + 1; //Increase the score.
-            document.getElementById("button" + a).style = "background-color:lime;color:Blue;";
-            document.getElementById("button" + lastbutton).style = "background-color:lime;color:Blue;";
+            document.getElementById("button" + a).style = "transition-duration: 0.8s;background-color:lime;color:Blue;";
+            document.getElementById("button" + lastbutton).style = "transition-duration: 0.8s;background-color:lime;color:Blue;";
             //Change their colours to green.
             document.getElementById("button" + lastbutton).disabled = "disabled";
             document.getElementById("button" + a).disabled = "disabled";
