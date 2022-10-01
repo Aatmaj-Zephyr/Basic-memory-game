@@ -14,7 +14,6 @@ How to play this game-
 
 ![image](https://user-images.githubusercontent.com/83284294/131456008-9c1096ce-d7a9-4051-bc5e-33d18580fc98.png)
 
-
-
 ## How to contribute?
+
 Fix any issues for hacktoberfest participation.
