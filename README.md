@@ -12,7 +12,7 @@ How to play this game-
 2. When two same cards are selected, score is increased.
 3. Challenge yourself to complete within the least number of moves possible.
 
-![image](https://user-images.githubusercontent.com/83284294/131456008-9c1096ce-d7a9-4051-bc5e-33d18580fc98.png)
+<img width="1497" alt="image" src="https://user-images.githubusercontent.com/83284294/194270847-5b319343-479d-4642-925c-c96f614935ab.png">
 
 ## How to contribute?
 
@@ -23,3 +23,7 @@ Fix any issues for hacktoberfest participation.
 3. Fix any the issue.
 4. Create a pull request.
 5. Add screenshots of the webapp to highlight the changes made.
+
+
+______
+# [Live Link](https://aatmaj-zephyr.github.io/Basic-memory-game/)
