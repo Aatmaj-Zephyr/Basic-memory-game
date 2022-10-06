@@ -24,6 +24,6 @@ Fix any issues for hacktoberfest participation.
 4. Create a pull request.
 5. Add screenshots of the webapp to highlight the changes made.
 
+---
 
-______
 # [Live Link](https://aatmaj-zephyr.github.io/Basic-memory-game/)
