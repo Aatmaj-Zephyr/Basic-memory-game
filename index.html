@@ -1,138 +1,115 @@
 <html>
-	<title>Memory game</title>
-	<head>
-		<style id="style">
-			.button {
-				min-width: 120px;
-				min-height: 120px;
-				max-width: 120px;
-				max-height: 120px;
-				object-fit: contain;
-			}
-			.button:hover {
-				background-color: yellow;
-				color: black;
-			}
-			.h1 {
-				font-family: 'Brush Script MT', cursive;
-				color: red;
-			}
-			.row {
-				display: flex;
-				width: 100%;
-    			justify-content: space-around;
-				margin-bottom: 2rem;
-			}
-			.disabled {
-				opacity: 0.6;
-				cursor: not-allowed;
-			}
-		</style>
-	</head>
-	<body>
-		<h1 class="h1">Memory game</h1>
-		<div class="row">
-			<img 
-				id="button1" 
-				class="button" 
-				src="/images/super-smash-bros/question.png"
-				onclick="Buttonclicked(1)"
-			/>
-			<img 
-				id="button2" 
-				class="button" 
-				src="/images/super-smash-bros/question.png"
-				onclick="Buttonclicked(2)"
-			/>
-			<img 
-				id="button3" 
-				class="button" 
-				src="/images/super-smash-bros/question.png"
-				onclick="Buttonclicked(3)"
-			/>
-			<img 
-				id="button4" 
-				class="button" 
-				src="/images/super-smash-bros/question.png"
-				onclick="Buttonclicked(4)"
-			/>
-			<img 
-				id="button5" 
-				class="button" 
-				src="/images/super-smash-bros/question.png"
-				onclick="Buttonclicked(5)"
-			/>
-			<img 
-				id="button6" 
-				class="button" 
-				src="/images/super-smash-bros/question.png"
-				onclick="Buttonclicked(6)"
-			/>
-			<img 
-				id="button7" 
-				class="button" 
-				src="/images/super-smash-bros/question.png"
-				onclick="Buttonclicked(7)"
-			/>
-			<img 
-				id="button8" 
-				class="button" 
-				src="/images/super-smash-bros/question.png"
-				onclick="Buttonclicked(8)"
-			/>
+<title>Memory game</title>
+
+<head>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+	<style id="style">
+		.button:hover {
+			background-color: yellow;
+			color: black;
+		}
+
+		.h1 {
+			font-family: 'Brush Script MT', cursive;
+			color: red;
+		}
+
+		.keys {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 20px;
+			padding: 20px;
+		}
+
+		.disabled {
+			opacity: 0.6;
+			cursor: not-allowed;
+		}
+
+		#score,#Turns {
+			font-weight: bold;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h1 class="h1">Memory game</h1>
+
+	<div class="container-fluid d-flex flex-column justify-content-end align-items-center">
+
+		<p id="score">Score : 0</p>
+		<p id="Turns">Turns taken : 0</p>
+
+	</div>
+
+	<div class="container">
+		<div class="keys">
+			<button id="button1" class="button" onclick="Buttonclicked(1) ">
+				?
+			</button>
+			<button id="button2" class="button" onclick="Buttonclicked(2) ">
+				?
+			</button>
+			<button id="button3" class="button" onclick="Buttonclicked(3) ">
+				?
+			</button>
+			<button id="button4" class="button" onclick="Buttonclicked(4) ">
+				?
+			</button>
+			<button id="button5" class="button" onclick="Buttonclicked(5) ">
+				?
+			</button>
+			<button id="button6" class="button" onclick="Buttonclicked(6) ">
+				?
+			</button>
+			<button id="button7" class="button" onclick="Buttonclicked(7) ">
+				?
+			</button>
+			<button id="button8" class="button" onclick="Buttonclicked(8) ">
+				?
+			</button>
+			<button id="button9" class="button" onclick="Buttonclicked(9) ">
+				?
+			</button>
+			<button id="button10" class="button" onclick="Buttonclicked(10)">
+				?
+			</button>
+			<button id="button11" class="button" onclick="Buttonclicked(11)">
+				?
+			</button>
+			<button id="button12" class="button" onclick="Buttonclicked(12)">
+				?
+			</button>
+			<button id="button13" class="button" onclick="Buttonclicked(13)">
+				?
+			</button>
+			<button id="button14" class="button" onclick="Buttonclicked(14)">
+				?
+			</button>
+			<button id="button15" class="button" onclick="Buttonclicked(15)">
+				?
+			</button>
+			<button id="button16" class="button" onclick="Buttonclicked(16)">
+				?
+			</button>
+
 		</div>
-		<div class="row">
-			<img 
-				id="button9" 
-				class="button" 
-				src="/images/super-smash-bros/question.png"
-				onclick="Buttonclicked(9)"
-			/>
-			<img 
-				id="button10" 
-				class="button" 
-				src="/images/super-smash-bros/question.png"
-				onclick="Buttonclicked(10)"
-			/>
-			<img 
-				id="button11" 
-				class="button" 
-				src="/images/super-smash-bros/question.png"
-				onclick="Buttonclicked(11)"
-			/>
-			<img 
-				id="button12" 
-				class="button" 
-				src="/images/super-smash-bros/question.png"
-				onclick="Buttonclicked(12)"
-			/>
-			<img 
-				id="button13" 
-				class="button" 
-				src="/images/super-smash-bros/question.png"
-				onclick="Buttonclicked(13)"
-			/>
-			<img 
-				id="button14" 
-				class="button" 
-				src="/images/super-smash-bros/question.png"
-				onclick="Buttonclicked(14)"
-			/>
-			<img 
-				id="button15" 
-				class="button" 
-				src="/images/super-smash-bros/question.png"
-				onclick="Buttonclicked(15)"
-			/>
-			<img 
-				id="button16" 
-				class="button" 
-				src="/images/super-smash-bros/question.png"
-				onclick="Buttonclicked(16)"
-			/>
-		</div>
-		<p id="score">Score=0</p>
-		<p id="Turns">Turns taken=0</p>
-		<script src="MemoryGame.js"></script>
-	</body>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+		integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+		integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+		crossorigin="anonymous"></script>
+	<script src="MemoryGame.js"></script>
+</body>
+
 </html>
