@@ -6,9 +6,9 @@ var turns = 0; //Number of turns taken.
 const Cards = []; //Array to store the Cards.
 //Setting the Cards.
 for (let j = 0; j < 8; j++) {
-  r = Math.floor(Math.random() * (90 - 64 + 1)) + 64; //Character set from unicode.
-  Cards.push(String.fromCharCode(r)); //Push twice.
-  Cards.push(String.fromCharCode(r));
+  r = Math.floor(Math.random() * 17); //Random number from 1 to 16.
+  Cards.push(r); //Push twice.
+  Cards.push(r);
 }
 Cards.sort(() => 0.5 - Math.random()); //Random shuffling of Cards.
 Cards.push(Cards[0]); //Ignore the Card at 0th positon.
@@ -23,7 +23,9 @@ for (let f = 1; f <= 16; f++) {
 function Buttonclicked(a) {
   //Function to be executed once button is clicked.
   //a is the parameter which tells which button is clicked.
-  document.getElementById("button" + a).innerHTML = Cards[a]; //Flip the Card over.
+  document.getElementById(
+    "button" + a
+  ).src = `/images/super-smash-bros/${Cards[a]}.png`; //Flip the Card over.
   document.getElementById("button" + a).disabled = "disabled"; //Disable clicking the same Card.
   document.getElementById("button" + a).style =
     "opacity: 0.7;cursor: not-allowed;color:Blue";
@@ -45,10 +47,14 @@ function checkscore(a) {
         "transition-duration: 0.8s;background-color:Tomato;color:White;";
       //If invalid, then set the background background-color Orange.
       window.setTimeout(function () {
-        document.getElementById("button" + a).innerHTML = "?";
+        document.getElementById(
+          "button" + a
+        ).src = `/images/super-smash-bros/question.png`;
         document.getElementById("button" + a).style = style;
         document.getElementById("button" + temp).style = style;
-        document.getElementById("button" + temp).innerHTML = "?";
+        document.getElementById(
+          "button" + temp
+        ).src = `/images/super-smash-bros/question.png`;
         document.getElementById("button" + temp).disabled = "";
         document.getElementById("button" + a).disabled = "";
       }, 1200);
