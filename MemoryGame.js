@@ -63,7 +63,8 @@ function checkscore(a) {
       document.getElementById("button" + lastbutton).style =
         "transition-duration: 0.8s;background-color:lime;color:Blue;";
       //Change their colours to green.
-      document.getElementById("button" + lastbutton).style = "pointer-events:none;";
+      document.getElementById("button" + lastbutton).style =
+        "pointer-events:none;";
       document.getElementById("button" + a).style = "pointer-events:none;";
       //Disable them from further clicking.
       document.getElementById("score").innerHTML = "Score=" + score;
