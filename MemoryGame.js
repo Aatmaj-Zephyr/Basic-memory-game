@@ -2,6 +2,7 @@
 var lastbutton = null; //Last button that was clicked.
 var score = 0; //Score, i.e. how many Cards are opened
 var turns = 0; //Number of turns taken.
+let isEnableClickTile = true;
 
 const Cards = []; //Array to store the Cards.
 //Setting the Cards.
@@ -21,6 +22,9 @@ for (let f = 1; f <= 16; f++) {
   //Button formatting
 }
 function Buttonclicked(a) {
+  if (!isEnableClickTile) {
+    return;
+  }
   //Function to be executed once button is clicked.
   //a is the parameter which tells which button is clicked.
   document.getElementById("button" + a).src = `./images/${Cards[a]}.png`; // Flip the Card over
@@ -36,6 +40,7 @@ function checkscore(a) {
     //If it is the first Card (from two Cards) to be chosen,
     //then set the value of lastbutton to the button pressed.
   } else {
+    setClickableOnTiles(false);
     if (Cards[a] != Cards[lastbutton]) {
       //If they don't match.....
       temp = lastbutton;
@@ -51,6 +56,7 @@ function checkscore(a) {
         document.getElementById("button" + temp).src = `./images/question.png`;
         document.getElementById("button" + temp).style = "";
         document.getElementById("button" + a).style = "";
+        setClickableOnTiles(true);
       }, 1200);
       //With delay, flip them back. and enable clicking.
 
@@ -69,6 +75,7 @@ function checkscore(a) {
       //Disable them from further clicking.
       document.getElementById("score").innerHTML = "Score=" + score;
       //Display the score.
+      setClickableOnTiles(true);
       lastbutton = null;
     }
 
@@ -88,4 +95,16 @@ function gameover() {
   }, 1000);
   document.getElementById("score").innerHTML = "Game over!";
   document.getElementById("Turns").innerHTML = "You took " + turns + " turns";
+}
+
+function setClickableOnTiles(isEnable) {
+  const tiles = document.querySelectorAll('img.button');
+  for (const tile of tiles) {
+    if (isEnable) {
+      tile.classList.remove('cursor-not-allowed');
+    } else {
+      tile.classList.add('cursor-not-allowed');
+    }
+  }
+  isEnableClickTile = isEnable;
 }
