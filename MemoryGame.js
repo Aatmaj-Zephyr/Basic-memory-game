@@ -98,12 +98,12 @@ function gameover() {
 }
 
 function setClickableOnTiles(isEnable) {
-  const tiles = document.querySelectorAll('img.button');
+  const tiles = document.querySelectorAll("img.button");
   for (const tile of tiles) {
     if (isEnable) {
-      tile.classList.remove('cursor-not-allowed');
+      tile.classList.remove("cursor-not-allowed");
     } else {
-      tile.classList.add('cursor-not-allowed');
+      tile.classList.add("cursor-not-allowed");
     }
   }
   isEnableClickTile = isEnable;
