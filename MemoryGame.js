@@ -1,15 +1,11 @@
 // The loader function
 document.onreadystatechange = function () {
   if (document.readyState !== "complete") {
-    document.querySelector(
-      ".main").style.display = "none";
-    document.querySelector(
-      ".loader").style.display = "block";
+    document.querySelector(".main").style.display = "none";
+    document.querySelector(".loader").style.display = "block";
   } else {
-    document.querySelector(
-      ".loader").style.display = "none";
-    document.querySelector(
-      ".main").style.display = "block";
+    document.querySelector(".loader").style.display = "none";
+    document.querySelector(".main").style.display = "block";
   }
 };
 
