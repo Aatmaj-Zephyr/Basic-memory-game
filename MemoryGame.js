@@ -1,3 +1,18 @@
+// The loader function
+document.onreadystatechange = function () {
+  if (document.readyState !== "complete") {
+    document.querySelector(
+      ".main").style.display = "none";
+    document.querySelector(
+      ".loader").style.display = "block";
+  } else {
+    document.querySelector(
+      ".loader").style.display = "none";
+    document.querySelector(
+      ".main").style.display = "block";
+  }
+};
+
 //PascalCase followed
 var lastbutton = null; //Last button that was clicked.
 var score = 0; //Score, i.e. how many Cards are opened
