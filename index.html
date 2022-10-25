@@ -1,141 +1,115 @@
 <html>
-	<title>Memory game</title>
-	<head>
-		<style id="style">
-			.button {
-				min-width: 120px;
-				min-height: 120px;
-				max-width: 120px;
-				max-height: 120px;
-				object-fit: contain;
-			}
-			.button:hover {
-	
-				color: black;
-			}
-			.h1 {
-				font-family: 'Brush Script MT', cursive;
-				color: red;
-			}
-			.row {
-				display: flex;
-				width: 100%;
-    			justify-content: space-around;
-				margin-bottom: 2rem;
-			}
-			.disabled {
-				opacity: 0.6;
-				cursor: not-allowed;
-			}
-			.cursor-not-allowed {
-				cursor: not-allowed !important;
-			}
-		</style>
-	</head>
-	<body>
-		<h1 class="h1">Memory game</h1>
-		<div class="row">
-			<img 
-				id="button1" 
-				class="button" 
-				src="./images/question.png"
-				onclick="Buttonclicked(1)"
-			/>
-			<img 
-				id="button2" 
-				class="button" 
-				src="./images/question.png"
-				onclick="Buttonclicked(2)"
-			/>
-			<img 
-				id="button3" 
-				class="button" 
-				src="./images/question.png"
-				onclick="Buttonclicked(3)"
-			/>
-			<img 
-				id="button4" 
-				class="button" 
-				src="./images/question.png"
-				onclick="Buttonclicked(4)"
-			/>
-			<img 
-				id="button5" 
-				class="button" 
-				src="./images/question.png"
-				onclick="Buttonclicked(5)"
-			/>
-			<img 
-				id="button6" 
-				class="button" 
-				src="./images/question.png"
-				onclick="Buttonclicked(6)"
-			/>
-			<img 
-				id="button7" 
-				class="button" 
-				src="./images/question.png"
-				onclick="Buttonclicked(7)"
-			/>
-			<img 
-				id="button8" 
-				class="button" 
-				src="./images/question.png"
-				onclick="Buttonclicked(8)"
-			/>
-		</div>
-		<div class="row">
-			<img 
-				id="button9" 
-				class="button" 
-				src="./images/question.png"
-				onclick="Buttonclicked(9)"
-			/>
-			<img 
-				id="button10" 
-				class="button" 
-				src="./images/question.png"
-				onclick="Buttonclicked(10)"
-			/>
-			<img 
-				id="button11" 
-				class="button" 
-				src="./images/question.png"
-				onclick="Buttonclicked(11)"
-			/>
-			<img 
-				id="button12" 
-				class="button" 
-				src="./images/question.png"
-				onclick="Buttonclicked(12)"
-			/>
-			<img 
-				id="button13" 
-				class="button" 
-				src="./images/question.png"
-				onclick="Buttonclicked(13)"
-			/>
-			<img 
-				id="button14" 
-				class="button" 
-				src="./images/question.png"
-				onclick="Buttonclicked(14)"
-			/>
-			<img 
-				id="button15" 
-				class="button" 
-				src="./images/question.png"
-				onclick="Buttonclicked(15)"
-			/>
-			<img 
-				id="button16" 
-				class="button" 
-				src="./images/question.png"
-				onclick="Buttonclicked(16)"
-			/>
-		</div>
-		<p id="score">Score=0</p>
-		<p id="Turns">Turns taken=0</p>
-		<script src="MemoryGame.js"></script>
-	</body>
+  <title>Memory game</title>
+  <head>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="main">
+      <h1 class="h1">Memory game</h1>
+      <div class="row">
+        <img
+          id="button1"
+          class="button"
+          src="./images/question.png"
+          onclick="Buttonclicked(1)"
+        />
+        <img
+          id="button2"
+          class="button"
+          src="./images/question.png"
+          onclick="Buttonclicked(2)"
+        />
+        <img
+          id="button3"
+          class="button"
+          src="./images/question.png"
+          onclick="Buttonclicked(3)"
+        />
+        <img
+          id="button4"
+          class="button"
+          src="./images/question.png"
+          onclick="Buttonclicked(4)"
+        />
+        <img
+          id="button5"
+          class="button"
+          src="./images/question.png"
+          onclick="Buttonclicked(5)"
+        />
+        <img
+          id="button6"
+          class="button"
+          src="./images/question.png"
+          onclick="Buttonclicked(6)"
+        />
+        <img
+          id="button7"
+          class="button"
+          src="./images/question.png"
+          onclick="Buttonclicked(7)"
+        />
+        <img
+          id="button8"
+          class="button"
+          src="./images/question.png"
+          onclick="Buttonclicked(8)"
+        />
+      </div>
+      <div class="row">
+        <img
+          id="button9"
+          class="button"
+          src="./images/question.png"
+          onclick="Buttonclicked(9)"
+        />
+        <img
+          id="button10"
+          class="button"
+          src="./images/question.png"
+          onclick="Buttonclicked(10)"
+        />
+        <img
+          id="button11"
+          class="button"
+          src="./images/question.png"
+          onclick="Buttonclicked(11)"
+        />
+        <img
+          id="button12"
+          class="button"
+          src="./images/question.png"
+          onclick="Buttonclicked(12)"
+        />
+        <img
+          id="button13"
+          class="button"
+          src="./images/question.png"
+          onclick="Buttonclicked(13)"
+        />
+        <img
+          id="button14"
+          class="button"
+          src="./images/question.png"
+          onclick="Buttonclicked(14)"
+        />
+        <img
+          id="button15"
+          class="button"
+          src="./images/question.png"
+          onclick="Buttonclicked(15)"
+        />
+        <img
+          id="button16"
+          class="button"
+          src="./images/question.png"
+          onclick="Buttonclicked(16)"
+        />
+      </div>
+      <p id="score">Score=0</p>
+      <p id="Turns">Turns taken=0</p>
+    </div>
+    <span class="loader"></span>
+    <script src="MemoryGame.js"></script>
+  </body>
 </html>
