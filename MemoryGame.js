@@ -18,7 +18,7 @@ let isEnableClickTile = true;
 const Cards = []; //Array to store the Cards.
 //Setting the Cards.
 for (let j = 0; j < 8; j++) {
-  randoNum = Math.floor(Math.random() * 16) + 1; // Random number from 1 to 16.
+  var randoNum = Math.floor(Math.random() * 16) + 1; // Random number from 1 to 16.
   Cards.push(randoNum); //Push twice.
   Cards.push(randoNum);
 }
@@ -32,17 +32,17 @@ for (let f = 1; f <= 16; f++) {
   // document.getElementById("button" + f).hover="background-color: white; color: black; border: 2px solid #4CAF50;"
   //Button formatting
 }
-function Buttonclicked(a) {
-  if (!isEnableClickTile) {
-    return;
-  }
-  //Function to be executed once button is clicked.
-  //a is the parameter which tells which button is clicked.
-  document.getElementById("button" + a).src = `./images/${Cards[a]}.png`; // Flip the Card over
-  document.getElementById("button" + a).disabled = "disabled"; //Disable clicking the same Card.
-  document.getElementById("button" + a).style =
-    "opacity: 0.7;cursor: not-allowed;color:Blue";
-  checkscore(a); //Check the Cards.
+function Buttonclicked(a) {// eslint-disable-line
+	if (!isEnableClickTile) {
+		return;
+	}
+	//Function to be executed once button is clicked.
+	//a is the parameter which tells which button is clicked.
+	document.getElementById('button' + a).src = `./images/${Cards[a]}.png`; // Flip the Card over
+	document.getElementById('button' + a).disabled = 'disabled'; //Disable clicking the same Card.
+	document.getElementById('button' + a).style =
+		'opacity: 0.7;cursor: not-allowed;color:Blue';
+	checkscore(a); //Check the Cards.
 }
 
 function checkscore(a) {
@@ -54,7 +54,7 @@ function checkscore(a) {
     setClickableOnTiles(false);
     if (Cards[a] != Cards[lastbutton]) {
       //If they don't match.....
-      temp = lastbutton;
+      let temp = lastbutton;
       document.getElementById("button" + a).style =
         "transition-duration: 0.8s;background-color:Tomato;color:White;";
       document.getElementById("button" + temp).style =
