@@ -1,0 +1,23 @@
+{
+	"name": "basic-memory-game",
+	"version": "1.0.0",
+	"description": "Simulation of [this game](<https://en.wikipedia.org/wiki/Concentration_(card_game)>)",
+	"main": "MemoryGame.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"esLint": "npx eslint ."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/anshul137/Basic-memory-game.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/anshul137/Basic-memory-game/issues"
+	},
+	"homepage": "https://github.com/anshul137/Basic-memory-game#readme",
+	"devDependencies": {
+		"eslint": "^8.29.0"
+	}
+}
