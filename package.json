@@ -19,5 +19,8 @@
 	"homepage": "https://github.com/anshul137/Basic-memory-game#readme",
 	"devDependencies": {
 		"eslint": "^8.29.0"
+	},
+	"dependencies": {
+		"darkmode-js": "^1.5.7"
 	}
 }
