@@ -24,8 +24,8 @@ for (let j = 0; j < 8; j++) {
 }
 Cards.sort(() => 0.5 - Math.random()); //Random shuffling of Cards.
 Cards.push(Cards[0]); //Ignore the Card at 0th positon.
-var style =
-  "box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);transition-duration: 0.2s;cursor: pointer;border-radius: 8px;";
+// var style =
+  // "box-shadow: 0 8px 15px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);transition-duration: 0.2s;cursor: pointer;border-radius: 8px;";
 for (let f = 1; f <= 16; f++) {
   document.getElementById("button" + f).style = style;
   document.getElementById("button" + f).hover = "{color: green;}";
