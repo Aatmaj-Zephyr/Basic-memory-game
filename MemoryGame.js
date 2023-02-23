@@ -107,6 +107,11 @@ function gameover() {
   }, 1000);
   document.getElementById("score").innerHTML = "Game over!";
   document.getElementById("Turns").innerHTML = "You took " + turns + " turns";
+
+  window.setTimeout(function () {
+    location.reload();
+    //reload after the game is over after a delay.
+  }, 4000);
 }
 
 function setClickableOnTiles(isEnable) {
