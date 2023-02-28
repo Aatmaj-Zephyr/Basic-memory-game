@@ -1,58 +1,135 @@
 <html>
-<title>Memory game</title>
-
-<head>
-	<link rel="stylesheet" href="./styles.css" />
-	<link rel="icon" type="image/x-icon" href="./memory-game.ico">
-</head>
-
-<body>
-	<div class="main">
-		<h1 class="h1">Memory game</h1>
-		<div class="row">
-			<img id="button1" class="button" src="./images/question.png" onclick="Buttonclicked(1)" />
-			<img id="button2" class="button" src="./images/question.png" onclick="Buttonclicked(2)" />
-			<img id="button3" class="button" src="./images/question.png" onclick="Buttonclicked(3)" />
-			<img id="button4" class="button" src="./images/question.png" onclick="Buttonclicked(4)" />
-			<img id="button5" class="button" src="./images/question.png" onclick="Buttonclicked(5)" />
-			<img id="button6" class="button" src="./images/question.png" onclick="Buttonclicked(6)" />
-			<img id="button7" class="button" src="./images/question.png" onclick="Buttonclicked(7)" />
-			<img id="button8" class="button" src="./images/question.png" onclick="Buttonclicked(8)" />
+	<title>Memory game</title>
+	<head>
+		<link rel="stylesheet" href="./styles.css" />
+		<link rel="icon" type="image/x-icon" href="./memory-game.ico">
+	</head>
+	<body>
+		<div class="main">
+			<h1 class="h1">Memory game</h1>
+			<div class="row">
+				<img
+					id="button1"
+					class="button"
+					src="./images/question.png"
+					onclick="Buttonclicked(1)"
+				/>
+				<img
+					id="button2"
+					class="button"
+					src="./images/question.png"
+					onclick="Buttonclicked(2)"
+				/>
+				<img
+					id="button3"
+					class="button"
+					src="./images/question.png"
+					onclick="Buttonclicked(3)"
+				/>
+				<img
+					id="button4"
+					class="button"
+					src="./images/question.png"
+					onclick="Buttonclicked(4)"
+				/>
+				<img
+					id="button5"
+					class="button"
+					src="./images/question.png"
+					onclick="Buttonclicked(5)"
+				/>
+				<img
+					id="button6"
+					class="button"
+					src="./images/question.png"
+					onclick="Buttonclicked(6)"
+				/>
+				<img
+					id="button7"
+					class="button"
+					src="./images/question.png"
+					onclick="Buttonclicked(7)"
+				/>
+				<img
+					id="button8"
+					class="button"
+					src="./images/question.png"
+					onclick="Buttonclicked(8)"
+				/>
+			</div>
+			<div class="row">
+				<img
+					id="button9"
+					class="button"
+					src="./images/question.png"
+					onclick="Buttonclicked(9)"
+				/>
+				<img
+					id="button10"
+					class="button"
+					src="./images/question.png"
+					onclick="Buttonclicked(10)"
+				/>
+				<img
+					id="button11"
+					class="button"
+					src="./images/question.png"
+					onclick="Buttonclicked(11)"
+				/>
+				<img
+					id="button12"
+					class="button"
+					src="./images/question.png"
+					onclick="Buttonclicked(12)"
+				/>
+				<img
+					id="button13"
+					class="button"
+					src="./images/question.png"
+					onclick="Buttonclicked(13)"
+				/>
+				<img
+					id="button14"
+					class="button"
+					src="./images/question.png"
+					onclick="Buttonclicked(14)"
+				/>
+				<img
+					id="button15"
+					class="button"
+					src="./images/question.png"
+					onclick="Buttonclicked(15)"
+				/>
+				<img
+					id="button16"
+					class="button"
+					src="./images/question.png"
+					onclick="Buttonclicked(16)"
+				/>
+			</div>
+			<p id="score">Score=0</p>
+			<p id="Turns">Turns taken=0</p>
 		</div>
-		<div class="row">
-			<img id="button9" class="button" src="./images/question.png" onclick="Buttonclicked(9)" />
-			<img id="button10" class="button" src="./images/question.png" onclick="Buttonclicked(10)" />
-			<img id="button11" class="button" src="./images/question.png" onclick="Buttonclicked(11)" />
-			<img id="button12" class="button" src="./images/question.png" onclick="Buttonclicked(12)" />
-			<img id="button13" class="button" src="./images/question.png" onclick="Buttonclicked(13)" />
-			<img id="button14" class="button" src="./images/question.png" onclick="Buttonclicked(14)" />
-			<img id="button15" class="button" src="./images/question.png" onclick="Buttonclicked(15)" />
-			<img id="button16" class="button" src="./images/question.png" onclick="Buttonclicked(16)" />
-		</div>
-		<p id="score">Score=0</p>
-		<p id="Turns">Turns taken=0</p>
-	</div>
-	<span class="loader"></span>
-	<script src="MemoryGame.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
-	<script>
-		const options = {
-			bottom: '32px', // default: '32px'
-			time: '0.5s', // default: '0.3s'
-			mixColor: '#fff', // default: '#fff'
-			backgroundColor: '#fff', // default: '#fff'
-			buttonColorDark: '#100f2c', // default: '#100f2c'
-			buttonColorLight: '#fff', // default: '#fff'
-			saveInCookies: false, // default: true,
-			label: '🌓', // default: ''
-			autoMatchOsTheme: true, // default: true
-		};
+		<span class="loader"></span>
+		<script src="MemoryGame.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+		<script>
+			const options = {
+				bottom: '32px', // default: '32px'
+				time: '0.5s', // default: '0.3s'
+				mixColor: '#fff', // default: '#fff'
+				backgroundColor: '#fff', // default: '#fff'
+				buttonColorDark: '#100f2c', // default: '#100f2c'
+				buttonColorLight: '#fff', // default: '#fff'
+				saveInCookies: false, // default: true,
+				label: '🌓', // default: ''
+				autoMatchOsTheme: true, // default: true
+			};
 
-		function addDarkmodeWidget() {
-			new Darkmode(options).showWidget();
-		}
-		window.addEventListener('load', addDarkmodeWidget);
-	</script>
-</body>
-
+			function addDarkmodeWidget() {
+				new Darkmode(options).showWidget();
+			}
+			window.addEventListener('load', addDarkmodeWidget);
+		</script>
+	</body>
 </html>
